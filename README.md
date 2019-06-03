@@ -2,7 +2,7 @@
 ## Бэкенд
 Создать бд employees:
 ```mysql
-CREATE DATABASE EMPLOYEES;
+CREATE DATABASE employees;
 SHOW DATABASES;
 ```
 
