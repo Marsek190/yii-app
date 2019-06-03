@@ -1,5 +1,5 @@
 ## Установка
-## Бэкенд
+## Бекэнд
 Создать бд employees:
 ```mysql
 CREATE DATABASE employees;

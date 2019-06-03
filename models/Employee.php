@@ -18,4 +18,14 @@ class Employee extends ActiveRecord
     {
         return '{{employee}}';
     }
+
+    public function __set($name, $value)
+    {
+        if ($name === 'birthday') {
+            $date = (new \DateTime($value))->format('Y-m-d');
+            $this->setAttribute('birthday', $date);
+        } else {
+            parent::__set($name, $value);
+        }
+    }
 }

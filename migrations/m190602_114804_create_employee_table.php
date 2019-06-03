@@ -14,12 +14,13 @@ class m190602_114804_create_employee_table extends Migration
     {
        $this->createTable('{{%employee}}', [
             'id' => $this->primaryKey(),
-            'initials' => $this->string(255)->notNull(),
+            'initials' => $this->string(255)->unique()->notNull(),
             'birthday' => $this->dateTime()->notNull(),
             'city' => $this->string(255)->notNull(),
             'created_at' => $this->dateTime()->defaultValue(new \yii\db\Expression('NOW()')),
             'updated_at' => $this->dateTime()->defaultValue(new \yii\db\Expression('NOW()')),
         ]);
+
     }
 
     /**
